@@ -24,7 +24,5 @@ function createTweet(input) {
 }
 $(document).ready(function() {
     $.getJSON(prefix + quoteUrl, createTweet);
-    $('.trigger').click(function() {
-        $.getJSON(prefix + quoteUrl, createTweet);
-    });
+    $('.trigger').click($.getJSON(prefix + quoteUrl, createTweet));
 });
